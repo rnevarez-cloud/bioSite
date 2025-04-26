@@ -12,7 +12,12 @@ body {
     font-variation-settings: "wdth" 100;
     background-color: #31231E;
     margin: auto;
-    max-width: 80%;
+    max-width: 60%;
+}
+
+/* Utility Classes */
+.centered {
+    margin: auto;
 }
 
 /* Image Style */
@@ -20,6 +25,11 @@ img {
     max-width: 25%;
     height: auto;
     border: #214E34 solid 0.5em;
+    display: inline-block;
+}
+
+.longimage {
+    max-width: 15%;
 }
 
 /* Headers and Navigation */
@@ -51,20 +61,22 @@ a {
 
 #content {
     background-color: #F7F4F3;
-    margin: auto;
     overflow: auto;
 }
 
 #portrait {
     max-width: 25%;
-    margin: auto;
     display: block;
 }
 
 #bio {
     max-width: 80%;
-    margin: auto;
     text-indent: 2em;
+}
+
+.text {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Layout Classes */
@@ -78,10 +90,6 @@ a {
     img {
         float: left;
     }
-
-    p {
-        text-align: right;
-    }
 }
 
 .rightleft {
@@ -91,9 +99,5 @@ a {
     img {
         float: right;
         border: #F7F4F3 solid 0.5em;
-    }
-
-    p {
-        text-align: left;
     }
 }
