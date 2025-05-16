@@ -15,7 +15,7 @@ body {
     max-width: 60%;
 }
 
-/* Utility Classes */
+/* Layout Classes */
 .centered {
     margin: auto;
 }
@@ -24,7 +24,7 @@ body {
 img {
     max-width: 25%;
     height: auto;
-    border: #214E34 solid 0.5em;
+    border: #214e34 solid 0.5em;
     display: inline-block;
 }
 
@@ -43,14 +43,33 @@ nav, #blurb, #content {
     border-radius: 1.5em;
 }
 
-nav {
+nav, .skip {
     background-color: #7CAE7A;
 }
 
-a {
+a, .active:hover {
     color: #F7F4F3;
     font-weight: bold;
     text-decoration: none;
+}
+
+a:hover {
+    color: #214e34;
+    text-decoration: none; 
+}
+
+.active {
+    color: #214e34;
+}
+
+.skip {
+    position:absolute;
+    top: -5em;
+    padding: 1em;
+}
+
+.skip:focus {
+    top: 0;
 }
 
 /* Section Styles */
@@ -84,11 +103,17 @@ a {
     clear: both;
     padding: 1.2em;
     overflow: auto;
+    display: flex;
+
+    p {
+        margin: auto;
+        text-align: center;
+    }
 }
 
 .leftright {
     img {
-        float: left;
+        margin-right: 1em;
     }
 }
 
@@ -97,7 +122,8 @@ a {
     color: #F7F4F3;
 
     img {
-        float: right;
+        order: 2;
         border: #F7F4F3 solid 0.5em;
+        margin-left: 1em;
     }
 }
